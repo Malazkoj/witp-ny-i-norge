@@ -20,6 +20,17 @@ addElement("myCategoryTree","li","liAddedJS","<span>I am from client-app.js adde
     let category4= createCategory("4_0","myCategoryTree","NorskOpplæring og utdanning ","Lurer du p[ noe gelder opplæring","");
     let category5= createCategory("5_0","myCategoryTree","Viktige linker ","Lurer du p[ noe gelder jobb","");
     const categoryArray=[category1,category1_1,category2,category3,category4,category5];
+    let catagories = {
+        Jobb: {
+            id: 1,
+            subCategories: ["deltid", "heltid"]
+        }
+        1: {
+            id: 1,
+            parentName: "Jobb",
+            subCategories: ["deltid", "heltid"]
+        }
+    };
 for (let i=0;i<categoryArray.length;i++){
     addElement(categoryArray[i].categoryFatherID,"li",categoryArray[i].categoryID,categoryArray[i].categoryName);
 
