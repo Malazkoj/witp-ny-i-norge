@@ -42,6 +42,7 @@ app.listen(port, () => console.log('Starting web application on port 3000...'));
 export {}
 // main(){
      const categoryArray =createCategoryTreeNO();
+
 // }
 // create the category tree in norwegian
 function createCategoryTreeNO() {
@@ -53,7 +54,16 @@ function createCategoryTreeNO() {
     let category4= createCategory("4.0","0","NorskOpplæring og utdanning ","Lurer du p[ noe gelder opplæring","");
     let category5= createCategory("5.0","0","Viktige linker ","Lurer du p[ noe gelder jobb","");
 const categoryArray=[category1,category2,category3,category4,category5];
-return categoryArray;
+    /*document.getElementById("myCategoryTree").innerHTML="" +
+        "    <li><span class=\"caret\">"+categoryArray[0].categoryName+"</span></li>\n" +
+        "    <li><span class=\"caret\">"+categoryArray[1].categoryName+"</span></li>\n" +
+        "    <li><span class=\"caret\">"+categoryArray[2].categoryName+"</span></li>\n" +
+        "    <li><span class=\"caret\">"+categoryArray[3].categoryName+"</span></li>\n" +
+        "    <li><span class=\"caret\">"+categoryArray[4].categoryName+"</span></li>\n" +
+        "";*/
+    //document.getElementById("myCategoryTree").innerHTML="<li>hi</li>";
+    //console.log(document.getElementById("myCategoryTree").innerHTML);
+    return categoryArray;
     //const categoryArray=[
     //    category.categoryID=1.
     //]
