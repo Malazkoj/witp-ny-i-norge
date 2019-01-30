@@ -32,7 +32,20 @@ app.get('/api/categories', function (req, res) {
     res.send(categories);
     //res.send(hardCodedCatogries());
 });
+app.get('/api/categories/:id', function (req, res) {
+    let id = req.params.id;
+    console.log('received Get Sopping');
+    let resource = getResourceById(id);
+    console.log(resource.toString());
+    res.send(getSubCategoryById(id));
+});
 
+function getSubCategoryById(id){
+    switch (id) {
+        case 'shopping': return categories.Shopping;
+    }
+    return categories.id;
+}
 
 // Let Heroku eventually decide which port the application should be listen
 const port = process.env.PORT || 3000
