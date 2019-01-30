@@ -2,7 +2,7 @@ import express from 'express'
 import {getResourceById} from './api/api-utils.js'
 
 const app = express();
-
+const categories = hardCodedCatogries();
 /*
    Static resources: all the files under ./public will be returned from /
    -----------------
@@ -29,7 +29,8 @@ app.get('/api/categories', function (req, res) {
     let resource = getResourceById(parseInt(id));
     //console.log(`Retreived the corresponding resource: '${resource.id}'`);
 
-    res.send(hardCodedCatogries());
+    res.send(categories);
+    //res.send(hardCodedCatogries());
 });
 
 
@@ -38,21 +39,83 @@ const port = process.env.PORT || 3000
 // Starting the web server
 app.listen(port, () => console.log('Starting web application on port 3000...'));
 
-// Required by ESM (ES6)
+// Required by ESM (ES6)s
 export {}
 // main(){
 
-
 // }
-function hardCodedCatogries(){
+function hardCodedCatogries() {
     return {
-        1:{
-            parentName:"Shopping",
-
+        Shopping: {
+            parentName: "Shopping",
+            LoppeMarked: {
+                0: {
+                    link:
+                        "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    OpeningHours:
+                        {
+                            date: "28.02.2019",
+                            clock: "10.00",
+                        }
+                    ,
+                    Location: "Oslo",
+                    imgURL: "",
+                },
+                1: {
+                    link:
+                        "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    OpeningHours:
+                        {
+                            date: "10.03.2019",
+                            clock: "10.00",
+                        }
+                    ,
+                    Location: "Lillestrøm",
+                    imgURL: "",
+                }
+            },
         },
-        2:{
-            parentName:"Jobb",
-
+        Jobb: {
+            parentName: "Jobb",
+        },
+        Lover_og_regler: {
+            parentName: "Lover og regler",
+        },
+        Activities: {
+            parentName: "Activities",
+            indoors: {
+                0: {
+                    link: "liil nr 0",
+                    shortDescriotion: "Iam short descriptsn for 0io",
+                    imgURL: "img url 0",
+                    ageGroup: ["barn", "ung", "eldre"],
+                },
+                1: {
+                    link: "link nk 1",
+                    shortDescriotion: "s rd  1",
+                    imgURL: "img url 1",
+                    ageGroup: ["barn", "ung", "eldre"],
+                }
+            },
+            outdoors: {
+                0: {
+                    link: "link 0 ountdoors",
+                    shortDescriotion: "s d 0  outdoors",
+                    imgURL: "img url 0 outdoors",
+                    ageGroup: ["barn", "ung", "eldre"],
+                },
+                1: {
+                    link: "1 ou",
+                    shortDescriotion: "1 s d ou",
+                    imgURL: "imgurl1 1 ou",
+                    ageGroup: ["barn", "ung", "eldre"],
+                }
+            }
         }
+
     }
+}
+
+function hardCodeSpecialCatgory(categoryName){
+
 }
