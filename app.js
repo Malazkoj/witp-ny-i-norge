@@ -2,7 +2,7 @@ import express from 'express'
 import {getResourceById} from './api/api-utils.js'
 
 const app = express();
-
+const categories = hardCodedCatogries();
 /*
    Static resources: all the files under ./public will be returned from /
    -----------------
@@ -22,60 +22,113 @@ app.use(express.static('public'));
   Request params: Id
   Response: a json resource like { resource: { id: "1", content: "resource1" } }
  */
-app.get('/api/path/to/a/unique/ressource/:id', function (req, res) {
+app.get('/api/categories', function (req, res) {
 
     let id = req.params.id;
     console.log(`Received a GET request /api/path/to/a/unique/ressource for the following id: '${id}'`);
     let resource = getResourceById(parseInt(id));
-    console.log(`Retreived the corresponding resource: '${resource.id}'`);
+    //console.log(`Retreived the corresponding resource: '${resource.id}'`);
 
-    res.send(`{"resource": { "id": "${resource.id}", "content": "${resource.content}"}}`);
+    res.send(categories);
+    //res.send(hardCodedCatogries());
+});
+app.get('/api/categories/:id', function (req, res) {
+    let id = req.params.id;
+    console.log('received Get Sopping');
+    let resource = getResourceById(id);
+    console.log(resource.toString());
+    res.send(getSubCategoryById(id));
 });
 
+function getSubCategoryById(id){
+    switch (id) {
+        case 'shopping': return categories.Shopping;
+    }
+    return categories.id;
+}
 
 // Let Heroku eventually decide which port the application should be listen
 const port = process.env.PORT || 3000
 // Starting the web server
 app.listen(port, () => console.log('Starting web application on port 3000...'));
 
-// Required by ESM (ES6)
+// Required by ESM (ES6)s
 export {}
 // main(){
-     const categoryArray =createCategoryTreeNO();
 
 // }
-// create the category tree in norwegian
-function createCategoryTreeNO() {
-    //categoryfather is 0 if it's a general/hoved category, or categoryFather is its category's father and it's a sub category
-    //let category = {categoryID:0,categoryFatherID:"",categoryName:"",categoryDescription:"",categoryTitle:""};
-    let category1= createCategory("1.0","0","Jobb","Lurer du på noe gelder jobb","");
-    let category2= createCategory("2.0","0","Lover og regler","Lurer du på noe gelder Lover of regler","");
-    let category3= createCategory("3.0","0","Aktiviteter","Lurer du p[ noe gelder jobb","");
-    let category4= createCategory("4.0","0","NorskOpplæring og utdanning ","Lurer du p[ noe gelder opplæring","");
-    let category5= createCategory("5.0","0","Viktige linker ","Lurer du p[ noe gelder jobb","");
-const categoryArray=[category1,category2,category3,category4,category5];
-    /*document.getElementById("myCategoryTree").innerHTML="" +
-        "    <li><span class=\"caret\">"+categoryArray[0].categoryName+"</span></li>\n" +
-        "    <li><span class=\"caret\">"+categoryArray[1].categoryName+"</span></li>\n" +
-        "    <li><span class=\"caret\">"+categoryArray[2].categoryName+"</span></li>\n" +
-        "    <li><span class=\"caret\">"+categoryArray[3].categoryName+"</span></li>\n" +
-        "    <li><span class=\"caret\">"+categoryArray[4].categoryName+"</span></li>\n" +
-        "";*/
-    //document.getElementById("myCategoryTree").innerHTML="<li>hi</li>";
-    //console.log(document.getElementById("myCategoryTree").innerHTML);
-    return categoryArray;
-    //const categoryArray=[
-    //    category.categoryID=1.
-    //]
+function hardCodedCatogries() {
+    return {
+        Shopping: {
+            parentName: "Shopping",
+            LoppeMarked: {
+                0: {
+                    link:
+                        "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    OpeningHours:
+                        {
+                            date: "28.02.2019",
+                            clock: "10.00",
+                        }
+                    ,
+                    Location: "Oslo",
+                    imgURL: "",
+                },
+                1: {
+                    link:
+                        "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    OpeningHours:
+                        {
+                            date: "10.03.2019",
+                            clock: "10.00",
+                        }
+                    ,
+                    Location: "Lillestrøm",
+                    imgURL: "",
+                }
+            },
+        },
+        Jobb: {
+            parentName: "Jobb",
+        },
+        Lover_og_regler: {
+            parentName: "Lover og regler",
+        },
+        Activities: {
+            parentName: "Activities",
+            indoors: {
+                0: {
+                    link: "liil nr 0",
+                    shortDescriotion: "Iam short descriptsn for 0io",
+                    imgURL: "img url 0",
+                    ageGroup: ["barn", "ung", "eldre"],
+                },
+                1: {
+                    link: "link nk 1",
+                    shortDescriotion: "s rd  1",
+                    imgURL: "img url 1",
+                    ageGroup: ["barn", "ung", "eldre"],
+                }
+            },
+            outdoors: {
+                0: {
+                    link: "link 0 ountdoors",
+                    shortDescriotion: "s d 0  outdoors",
+                    imgURL: "img url 0 outdoors",
+                    ageGroup: ["barn", "ung", "eldre"],
+                },
+                1: {
+                    link: "1 ou",
+                    shortDescriotion: "1 s d ou",
+                    imgURL: "imgurl1 1 ou",
+                    ageGroup: ["barn", "ung", "eldre"],
+                }
+            }
+        }
 
+    }
 }
-function createCategory(categoryID,categoryFatherID,categoryName,categoryDescription,categoryTitle){
-    let myCategory={};
-    myCategory.categoryID=categoryID;
-    myCategory.categoryName=categoryFatherID;
-    myCategory.categoryName=categoryName;
-    myCategory.categoryDescription=categoryDescription;
-    myCategory.categoryTitle=categoryTitle;
-    return myCategory;
+
+function hardCodeSpecialCatgory(categoryName){
 
 }
