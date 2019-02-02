@@ -1,14 +1,16 @@
-body {
-    background-color: #3e6a00;
+.bg {
+    /* The image used */
+    background-image: url("https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.departure {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 16px;
-    margin-bottom: 32px;
-    padding: 10px;
-    background-color: #7a7575;
-    border-radius: 4px;
+.body{
+    margin-top: 2rem;
 }
