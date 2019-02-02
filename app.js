@@ -15,19 +15,12 @@ app.use(express.static('public'));
    -------------
  */
 
-/*
-  Endpoint: Hent resource by Id
-  Method: GET
-  Path: /api/path/to/a/unique/ressource/:Id
-  Request params: Id
-  Response: a json resource like { resource: { id: "1", content: "resource1" } }
- */
-app.get('/api/categories', function (req, res) {
+app.get('/api/interest-titles', function (req, res) {
+    res.send(getInterestTitles());
+} );
 
-    let id = req.params.id;
-    console.log(`Received a GET request /api/path/to/a/unique/ressource for the following id: '${id}'`);
-    let resource = getResourceById(parseInt(id));
-    //console.log(`Retreived the corresponding resource: '${resource.id}'`);
+
+app.get('/api/categories', function (req, res) {
 
     res.send(categories);
     //res.send(hardCodedCatogries());
@@ -40,6 +33,19 @@ app.get('/api/categories/:id', function (req, res) {
     res.send(getSubCategoryById(id));
 });
 
+// Let Heroku eventually decide which port the application should be listen
+const port = process.env.PORT || 3000;
+
+// Serving static resources here (all the files under ./public)
+app.use(express.static('public'));
+
+// Starting the web server
+app.listen(port, () => console.log('Starting web application on port 3000...'));
+
+
+// Required by ESM (ES6)s
+export {}
+
 function getSubCategoryById(id){
     switch (id) {
         case 'shopping': return categories.Shopping;
@@ -47,16 +53,18 @@ function getSubCategoryById(id){
     return categories.id;
 }
 
-// Let Heroku eventually decide which port the application should be listen
-const port = process.env.PORT || 3000;
-// Starting the web server
-app.listen(port, () => console.log('Starting web application on port 3000...'));
 
-// Required by ESM (ES6)s
-export {}
-// main(){
+function getInterestTitles(){
 
-// }
+    const values = Object.values(categories);
+    let titles = [];
+
+    for (const value of values) {
+        titles.push(value.titel)
+    }
+    return titles;
+}
+
 function getHardCodedCategories() {
     return {
         aktiviteterForBarn:{
