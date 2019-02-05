@@ -1,13 +1,18 @@
 import express from 'express'
 import {getResourceById} from './api/api-utils.js'
+import bodyParser from 'body-parser'
+
 
 const app = express();
-const categories = getHardCodedCategories();
+app.use(bodyParser.json());
+
 /*
    Static resources: all the files under ./public will be returned from /
    -----------------
  */
 app.use(express.static('public'));
+
+const categories = getHardCodedCategories();
 
 
 /*
@@ -398,7 +403,7 @@ function getHardCodedCategories() {
             }
         },
         frivilligArbeid:{
-            titel:"Aktiviteter For Barn",
+            titel:"Frivillig Arbeid",
             0: {
                 activityTitle:"Sub category 1",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
@@ -431,7 +436,7 @@ function getHardCodedCategories() {
             }
         },
         shopping: {
-            titel:"Aktiviteter For Barn",
+            titel:"Shopping",
             0: {
                 activityTitle:"Sub category 1",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
