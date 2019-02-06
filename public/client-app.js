@@ -15,8 +15,22 @@ function main() {
             populateInterestDropDownList(interestTitles);
         });
 
+
 }
 
+function getActivitiesForInterest() {
+    let option = $('#inputGroupSelect02 option:selected');
+    let value = option.value;
+
+    const response = fetch('/api/activities-for-interest?interestTitle='+value)
+        .then(function (respone) {
+            return respone.json();
+
+        })
+        .then(function (activitiesJson) {
+            console.log(activitiesJson);
+        })
+}
 function populateInterestDropDownList(interestTitles){
 
     var dropdown = document.getElementById("inputGroupSelect02");

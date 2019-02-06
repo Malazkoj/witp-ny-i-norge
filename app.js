@@ -24,6 +24,12 @@ app.get('/api/interest-titles', function (req, res) {
     res.send(getInterestTitles());
 } );
 
+app.get('/api/activities-for-interest', function (req, res) {
+    let interestTitle = req.query.interestTitle;
+
+    res.send(getActivitiesForInterest(interestTitle));
+} );
+
 
 app.get('/api/categories', function (req, res) {
 
@@ -68,6 +74,10 @@ function getInterestTitles(){
         titles.push(value.titel)
     }
     return titles;
+}
+
+function getActivitiesForInterest(interestTitle){
+    return categories[interestTitle];
 }
 
 function getHardCodedCategories() {
