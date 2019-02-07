@@ -11,34 +11,57 @@ function main() {
             return response.json();
         })
         .then(function(myJson) {
+/*
             interestTitles = Object.values(myJson);
-            populateInterestDropDownList(interestTitles);
+*/
+            populateInterestDropDownList(myJson);
         });
-
 
 }
 
-function getActivitiesForInterest() {
-    let option = $('#inputGroupSelect02 option:selected');
-    let value = option.value;
+document.addEventListener('DOMContentLoaded',  function() {
+    document.querySelector('select[name="inputGroupSelect02"]').onchange=getActivitiesForInterest;}, false);
 
-    const response = fetch('/api/activities-for-interest?interestTitle='+value)
+//    document.getElementById("fetch-schedule-button").addEventListener("click", function() { userAction()}, false);
+
+
+
+function getActivitiesForInterest(event) {
+    console.log("here");
+    let val = event.target.value;
+
+    console.log(val);
+/*
+    let option = $('#inputGroupSelect02 option:selected');
+    console.log(option);
+    let value = option.value;
+*/
+
+    let url = '/api/activities-for-interest?interestTitle='+val;
+    console.log(url);
+/*    const response = fetch(url)
         .then(function (respone) {
+            console.log(respone);
             return respone.json();
 
         })
         .then(function (activitiesJson) {
             console.log(activitiesJson);
-        })
+        })*/
 }
 function populateInterestDropDownList(interestTitles){
 
     var dropdown = document.getElementById("inputGroupSelect02");
+    console.log(interestTitles);
+
+    let keys = Object.keys(interestTitles);
 
     // Loop through the array
-    for (var i = 0; i < interestTitles.length; ++i) {
+    for (var i = 0; i < keys.length; ++i) {
         // Append the element to the end of Array list
-        dropdown[dropdown.length] = new Option(interestTitles[i], interestTitles[i]);
+        console.log(keys);
+        dropdown[dropdown.length] = new Option(interestTitles[keys[i]], keys[i]);
+        console.log(dropdown[dropdown.length]);
     }
 
 }

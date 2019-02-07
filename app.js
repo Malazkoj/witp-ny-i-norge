@@ -67,11 +67,11 @@ function getSubCategoryById(id){
 
 function getInterestTitles(){
 
-    const values = Object.values(categories);
-    let titles = [];
+    let titles = {};
+    const keys = Object.keys(categories);
 
-    for (const value of values) {
-        titles.push(value.titel)
+    for (const key of keys) {
+        titles[key] = categories[key].titel;
     }
     return titles;
 }
