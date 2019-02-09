@@ -3,7 +3,10 @@
     /*
     background-image: url("https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg");
     */
-    background-image: url("https://strawberrytours.com/images/LandingPages/Oslo/Oslo_2.jpg");
+    background-image:     linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ), url("neighborhood.jpg");
 
     /* Full height */
     height: 100%;
