@@ -4,24 +4,29 @@
  */
 
 function main() {
-
-    fetch('/api/interest-titles')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(myJson) {
-            populateInterestDropDownList(myJson);
-        });
-
+    populatePlacesDataList();
+    populateInterestDropDownList();
     getActivitiesForInterestDefault();
-
 }
 
 document.addEventListener('DOMContentLoaded',  function() {
     document.querySelector('select[name="inputGroupSelect02"]').onchange=getActivitiesForInterest;}, false);
 
-//    document.getElementById("fetch-schedule-button").addEventListener("click", function() { userAction()}, false);
+function populatePlacesDataList(){
+    fetch('/api/place-names')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(placesAray) {
 
+            $(document).ready( function() {
+                $(placesAray).each( function(index, item) {
+                    var option = $('<option value="'+item+'"></option>');
+                    $('#places').append(option);
+                });
+            });
+        });
+}
 
 
 function getActivitiesForInterest(event) {
@@ -87,15 +92,20 @@ function fetchActivitiesByUrl(url) {
         });
 }
 
-function populateInterestDropDownList(interestTitles){
+function populateInterestDropDownList(){
+    fetch('/api/interest-titles')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(interestTitles) {
+            var dropdown = document.getElementById("inputGroupSelect02");
 
-    var dropdown = document.getElementById("inputGroupSelect02");
+            let keys = Object.keys(interestTitles);
 
-    let keys = Object.keys(interestTitles);
-
-    for (var i = 0; i < keys.length; ++i) {
-        dropdown[dropdown.length] = new Option(interestTitles[keys[i]], keys[i]);
-    }
+            for (var i = 0; i < keys.length; ++i) {
+                dropdown[dropdown.length] = new Option(interestTitles[keys[i]], keys[i]);
+            }
+        });
 
 }
 
