@@ -47,9 +47,10 @@ function getActivitiesForInterest(event) {
         })
         .then(function (activitiesJson) {
             let activityTitle = activitiesJson["0"].activityTitle;
-            document.getElementById("heading1").innerHTML=activityTitle;
-            document.getElementById("heading1").innerHTML=activityTitle;
-            document.getElementById("heading1").innerHTML=activityTitle;
+            document.getElementById("headingActivity1").innerHTML=activityTitle;
+            document.getElementById("headingActivity2").innerHTML=activityTitle;
+            document.getElementById("headingActivity3").innerHTML=activityTitle;
+
             return activitiesJson;
         })
 }
