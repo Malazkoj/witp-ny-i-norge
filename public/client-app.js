@@ -4,18 +4,16 @@
  */
 
 function main() {
-    let interestTitles = [];
 
-    const response = fetch('/api/interest-titles')
+    fetch('/api/interest-titles')
         .then(function(response) {
             return response.json();
         })
         .then(function(myJson) {
-/*
-            interestTitles = Object.values(myJson);
-*/
             populateInterestDropDownList(myJson);
         });
+
+    getActivitiesForInterestDefault();
 
 }
 
@@ -27,21 +25,25 @@ document.addEventListener('DOMContentLoaded',  function() {
 
 
 function getActivitiesForInterest(event) {
-    console.log("here");
+
     let val = event.target.value;
-
-    console.log(val);
-/*
-    let option = $('#inputGroupSelect02 option:selected');
-    console.log(option);
-    let value = option.value;
-*/
-
     let url = '/api/activities-for-interest?interestTitle='+val;
-    console.log(url);
-    const response = fetch(url)
+    fetchActivitiesByUrl(url);
+}
+
+
+
+function getActivitiesForInterestDefault() {
+
+    let val = "turmuligheter";
+    let url = '/api/activities-for-interest?interestTitle='+val;
+    fetchActivitiesByUrl(url);
+
+}
+
+function fetchActivitiesByUrl(url) {
+    fetch(url)
         .then(function (respone) {
-            console.log(respone);
             return respone.json();
 
         })
@@ -54,7 +56,7 @@ function getActivitiesForInterest(event) {
             document.getElementById("headingActivity1").innerHTML=activitiesJson["0"].activityTitle;
             document.getElementById("shortDescriptionActivity1").innerHTML=activitiesJson["0"].shortDescription;
             document.getElementById("externalLinkActivity1").href=activitiesJson["0"].link;
-            document.getElementById("dateTimeActivity1").innerHTML=openingHours.dayOfWeek + ", " + openingHours.date + " - kl " + openingHours.clock;
+            document.getElementById("dateTimeActivity1").innerHTML=openingHours.dayOfWeek + " " + openingHours.date + "  " + openingHours.clockStart + " - " + openingHours.clockFinish;
             document.getElementById("locationActivity1").innerHTML=location.placeName + ", " + location.address + ", " + location.city;
             document.getElementById("locationActivity1").href=location.googleMapsUrl;
 
@@ -66,7 +68,7 @@ function getActivitiesForInterest(event) {
             document.getElementById("headingActivity2").innerHTML=activitiesJson["1"].activityTitle;
             document.getElementById("shortDescriptionActivity2").innerHTML=activitiesJson["1"].shortDescription;
             document.getElementById("externalLinkActivity2").href=activitiesJson["1"].link;
-            document.getElementById("dateTimeActivity2").innerHTML=openingHours.dayOfWeek + ", " + openingHours.date + " - kl " + openingHours.clock;
+            document.getElementById("dateTimeActivity2").innerHTML=openingHours.dayOfWeek + " " + openingHours.date + "  " + openingHours.clockStart + " - " + openingHours.clockFinish;
             document.getElementById("locationActivity2").innerHTML=location.placeName + ", " + location.address + ", " + location.city;
             document.getElementById("locationActivity2").href=location.googleMapsUrl;
 
@@ -78,26 +80,21 @@ function getActivitiesForInterest(event) {
             document.getElementById("headingActivity3").innerHTML=activitiesJson["2"].activityTitle;
             document.getElementById("shortDescriptionActivity3").innerHTML=activitiesJson["2"].shortDescription;
             document.getElementById("externalLinkActivity3").href=activitiesJson["2"].link;
-            document.getElementById("dateTimeActivity3").innerHTML=openingHours.dayOfWeek + ", " + openingHours.date + " - kl " + openingHours.clock;
+            document.getElementById("dateTimeActivity3").innerHTML=openingHours.dayOfWeek + " " + openingHours.date + "  " + openingHours.clockStart + " - " + openingHours.clockFinish;
             document.getElementById("locationActivity3").innerHTML=location.placeName + ", " + location.address + ", " + location.city;
             document.getElementById("locationActivity3").href=location.googleMapsUrl;
             //End of activities
-            return activitiesJson;
-        })
+        });
 }
+
 function populateInterestDropDownList(interestTitles){
 
     var dropdown = document.getElementById("inputGroupSelect02");
-    console.log(interestTitles);
 
     let keys = Object.keys(interestTitles);
 
-    // Loop through the array
     for (var i = 0; i < keys.length; ++i) {
-        // Append the element to the end of Array list
-        console.log(keys);
         dropdown[dropdown.length] = new Option(interestTitles[keys[i]], keys[i]);
-        console.log(dropdown[dropdown.length]);
     }
 
 }
