@@ -113,6 +113,21 @@ function getHardCodedCategories() {
                 location: "Lillestrøm",
                 imgURL: "",
                 ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
             }
         },
         festivaler:{
@@ -134,6 +149,21 @@ function getHardCodedCategories() {
             },
             1: {
                 activityTitle:"Sub category 2",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["voksne"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
@@ -179,6 +209,21 @@ function getHardCodedCategories() {
                 location: "Lillestrøm",
                 imgURL: "",
                 ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
             }
         },
         leksehjelp:{
@@ -200,6 +245,21 @@ function getHardCodedCategories() {
             },
             1: {
                 activityTitle:"Sub category 2",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
@@ -245,6 +305,21 @@ function getHardCodedCategories() {
                 location: "Lillestrøm",
                 imgURL: "",
                 ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
             }
         },
         turmuligheter:{
@@ -266,6 +341,21 @@ function getHardCodedCategories() {
             },
             1: {
                 activityTitle:"Sub category 2",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
@@ -311,6 +401,21 @@ function getHardCodedCategories() {
                 location: "Lillestrøm",
                 imgURL: "",
                 ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
             }
         },
         kulturelleTilbud:{
@@ -344,7 +449,23 @@ function getHardCodedCategories() {
                 location: "Lillestrøm",
                 imgURL: "",
                 ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
             }
+
         },
         sosialeMoteplasser:{
             titel:"Sosiale Møteplasser",
@@ -365,6 +486,21 @@ function getHardCodedCategories() {
             },
             1: {
                 activityTitle:"Sub category 2",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
@@ -410,6 +546,21 @@ function getHardCodedCategories() {
                 location: "Lillestrøm",
                 imgURL: "",
                 ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
             }
         },
         frivilligArbeid:{
@@ -443,7 +594,23 @@ function getHardCodedCategories() {
                 location: "Lillestrøm",
                 imgURL: "",
                 ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
             }
+
         },
         shopping: {
             titel:"Shopping",
@@ -476,77 +643,23 @@ function getHardCodedCategories() {
                 location: "Lillestrøm",
                 imgURL: "",
                 ageGroup:["barn"]
+            },
+            2: {
+                activityTitle:"Sub category 3",
+                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                link:
+                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                openingHours:
+                    {
+                        date: "10.03.2019",
+                        clock: "10.00",
+                    }
+                ,
+                location: "Lillestrøm",
+                imgURL: "",
+                ageGroup:["barn"]
             }
         }
-/*
-        shopping: {
-            parentName: "Shopping",
-            LoppeMarked: {
-                0: {
-                    link:
-                        "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
-                    OpeningHours:
-                        {
-                            date: "28.02.2019",
-                            clock: "10.00",
-                        }
-                    ,
-                    Location: "Oslo",
-                    imgURL: "",
-                },
-                1: {
-                    link:
-                        "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
-                    OpeningHours:
-                        {
-                            date: "10.03.2019",
-                            clock: "10.00",
-                        }
-                    ,
-                    Location: "Lillestrøm",
-                    imgURL: "",
-                }
-            },
-        },
-        Jobb: {
-            parentName: "Jobb",
-        },
-        Lover_og_regler: {
-            parentName: "Lover og regler",
-        },
-        Activities: {
-            parentName: "Activities",
-            indoors: {
-                0: {
-                    link: "liil nr 0",
-                    shortDescriotion: "Iam short descriptsn for 0io",
-                    imgURL: "img url 0",
-                    ageGroup: ["barn", "ung", "eldre"],
-                },
-                1: {
-                    link: "link nk 1",
-                    shortDescriotion: "s rd  1",
-                    imgURL: "img url 1",
-                    ageGroup: ["barn", "ung", "eldre"],
-                }
-            },
-            outdoors: {
-                0: {
-                    link: "link 0 ountdoors",
-                    shortDescriotion: "s d 0  outdoors",
-                    imgURL: "img url 0 outdoors",
-                    ageGroup: ["barn", "ung", "eldre"],
-                },
-                1: {
-                    link: "1 ou",
-                    shortDescriotion: "1 s d ou",
-                    imgURL: "imgurl1 1 ou",
-                    ageGroup: ["barn", "ung", "eldre"],
-                }
-            }
-        }
-*/
-
     }
 }
 

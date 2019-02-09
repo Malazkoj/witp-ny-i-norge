@@ -39,15 +39,19 @@ function getActivitiesForInterest(event) {
 
     let url = '/api/activities-for-interest?interestTitle='+val;
     console.log(url);
-/*    const response = fetch(url)
+    const response = fetch(url)
         .then(function (respone) {
             console.log(respone);
             return respone.json();
 
         })
         .then(function (activitiesJson) {
-            console.log(activitiesJson);
-        })*/
+            let activityTitle = activitiesJson["0"].activityTitle;
+            document.getElementById("heading1").innerHTML=activityTitle;
+            document.getElementById("heading1").innerHTML=activityTitle;
+            document.getElementById("heading1").innerHTML=activityTitle;
+            return activitiesJson;
+        })
 }
 function populateInterestDropDownList(interestTitles){
 
