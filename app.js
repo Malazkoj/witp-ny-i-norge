@@ -19,6 +19,9 @@ const categories = getHardCodedCategories();
    API endpoints
    -------------
  */
+app.get('/api/place-names', function (req, res) {
+    res.send(getPlaces());
+});
 
 app.get('/api/interest-titles', function (req, res) {
     res.send(getInterestTitles());
@@ -76,6 +79,64 @@ function getInterestTitles(){
     return titles;
 }
 
+function getPlaces() {
+    let places = [];
+//TODO needs optimization
+    const interestKeys = Object.keys(categories);
+    for(const interestKey of interestKeys){
+        let activityKeys = Object.keys(categories[interestKey]);
+         for( const activityKey of activityKeys){
+             if(!isNaN(Number(activityKey))){
+                 let cityName = categories[interestKey][activityKey].location.city;
+                 if(!places.includes(cityName)){
+                     places.push(cityName);
+                 }
+             }
+         }
+    }
+    return places;
+}
+
+
+/*
+
+function getPlacesWithDistricts() {
+    let placesArr = [];
+    let placesWithDistricts = {};
+    const interestKeys = Object.keys(categories);
+    for(const interestKey of interestKeys){
+        let activityKeys = Object.keys(categories[interestKey]);
+        console.log("activityKeys", activityKeys);
+         for( const activityKey of activityKeys){
+             console.log(activityKey);
+             if(!isNaN(Number(activityKey))){
+                 console.log(activityKey);
+                 let cityName = categories[interestKey][activityKey].location.city;
+                 let districtName = categories[interestKey][activityKey].location.district;
+                 console.log(cityName);
+                 if(!placesArr.includes(cityName)){
+                     placesArr.push(cityName);
+                 }
+                 if(placesWithDistricts[cityName] == null){
+                     placesWithDistricts[cityName] = [districtName];
+                 }else{
+                     //if(!placesWithDistricts[cityName].includes(districtName)){
+                     let a = [];
+                        a = placesWithDistricts[cityName];
+                        console.log(typeof a);
+                        console.log(a.length);
+                         //placesWithDistricts[cityName] = a.push(districtName);
+                     //}
+                 }
+             }
+         }
+    }
+    console.log(placesArr);
+    console.log(placesWithDistricts);
+    return placesArr;
+    //return {"places":placesArr};
+}
+* */
 function getActivitiesForInterest(interestTitle){
     return categories[interestTitle];
 }
@@ -91,9 +152,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     }
                 ,
                 location: {
@@ -115,9 +177,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -125,7 +188,7 @@ function getHardCodedCategories() {
                     area:"Akershus",
                     city:"Oslo",
                     zipCode:"0157",
-                    district: "Sentrum",
+                    district: "Alna",
                     googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
                 },
                 imgURL: "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
@@ -138,9 +201,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -164,9 +228,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -187,9 +252,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -210,9 +276,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -236,9 +303,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -259,9 +327,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -282,9 +351,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -308,9 +378,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -331,9 +402,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -354,9 +426,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -380,9 +453,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -403,9 +477,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -426,9 +501,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -452,9 +528,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -475,9 +552,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -498,9 +576,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -524,9 +603,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -547,9 +627,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -570,9 +651,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -596,9 +678,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -619,9 +702,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     }
                 ,
                 location: {
@@ -643,9 +727,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -670,9 +755,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -693,9 +779,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -716,9 +803,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -742,9 +830,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -765,9 +854,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -788,9 +878,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -814,9 +905,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -837,9 +929,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -860,9 +953,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -887,9 +981,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "28.02.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -910,9 +1005,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",
@@ -933,9 +1029,10 @@ function getHardCodedCategories() {
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
                 openingHours:
                     {
-                        dayOfWeek: "mandag",
+                        dayOfWeek: "Mandag",
                         date: "10.03.2019",
-                        clock: "10.00",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "SoCentral",

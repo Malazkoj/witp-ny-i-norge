@@ -24,7 +24,9 @@
 
                 <div class="row">
                     <div class="input-group col-6">
-                        <input type="text" class="form-control" placeholder="Skriv sted ...">
+                        <input list="places" name="places" type="text" class="form-control" placeholder="Skriv sted ...">
+                        <datalist id="places">
+                        </datalist>
                     </div>
                     <div class="input-group col-6">
                         <select class="custom-select" id="inputGroupSelect02" name="inputGroupSelect02">
@@ -34,14 +36,9 @@
                 </div>
             </div>
 
-            <!-- Example row of columns -->
+            <!-- Row of columns -->
             <div class="row">
                 <div class="col-lg-4">
-<!--
-                    <h2 id="heading1">Heading</h2>
-                    <p id="description1">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn btn-primary" href="#" role="button" id="link1">View details &raquo;</a></p>
--->
                     <div class="card" style="width: 22rem;">
                         <img id="imgActivity1" class="card-img-top" src="img1.jpg" height="180" width="286" alt="Card image cap">
                         <div class="card-body">
@@ -100,18 +97,23 @@
             </div>
 
             <!-- Site footer -->
-            <footer class="footer">
-                <p>&copy; WeIgniteTech 2019</p>
-            </footer>
+                <footer class="footer">
+                    <section id="lab_social_icon_footer">
+                        <!-- Include Font Awesome Stylesheet in Header -->
+                        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+                        <div class="container">
+                            <div class="text-center center-block">
+                                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                                <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                            </div>
+                        </div>
+                    </section>
+                </footer>
 
-        </div> <!-- /container -->
-        <!--Velkommen til ditt nabolag
-Her kan du velge interesse og sted og finne ut hva som skjer i ditt nabolag-->
+        </div>
 
-<!--
-        <script type="module" src="client-app.js"></script>
-        <script type="module" src="utils/client-app-utils.js"></script>
--->
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
