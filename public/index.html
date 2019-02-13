@@ -1,27 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello web-api</title>
-</head>
-<link rel="stylesheet" href="style.css">
-<script type="module" src="client-app.js"></script>
-<script type="module" src="utils/client-app-utils.js"></script>
+<html lang="no">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Velkommen til ditt nabolag</title>
 
-<body>
-<p id="say-hello"></p>
-<ul id="myCategoryTree">
-    <li><span class="caret"></span>
-        <ul class="nested">
-            <li>Water</li>
-            <li>Coffee</li>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
+        <script type="module" src="client-app.js"></script>
+    </head>
+    <body class="body">
 
-        </ul>
-    </li>
-    <li>
+        <div class="container">
+            <!-- Jumbotron -->
 
-    </li>
-</ul>
-</body>
+            <div class="jumbotron bg text-white">
+                <h1>Velkommen til ditt nabolag!</h1>
+                <p class="lead">Er du ny i nabolaget og lurer på hva som finnes av tilbud og aktiviteter? Da har du kommet til riktig sted! </p>
+                <p class="lead"> Her kan du søke etter aktiviteter basert på hvor du bor og hva du liker.</p>
 
+                <div class="row">
+                    <div class="input-group col-6">
+                        <input list="places" name="places" type="text" class="form-control" placeholder="Skriv sted ...">
+                        <datalist id="places">
+                        </datalist>
+                    </div>
+                    <div class="input-group col-6">
+                        <select class="custom-select" id="inputGroupSelect02" name="inputGroupSelect02">
+                            <option selected>Velg interesse</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row of columns -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" style="width: 22rem;">
+                        <img id="imgActivity1" class="card-img-top" src="img1.jpg" height="180" width="286" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" id="headingActivity1">Card title</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="dateTimeActivity1">Dato og Tid: </li>
+                            <li class="list-group-item" ><a id="locationActivity1" href="https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.740215" target="_blank" class="card-link" >AktivitetsSted: </a></li>
+                            <!---->
+                        </ul>
+                        <div class="card-body">
+                            <p id="shortDescriptionActivity1" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-body">
+                            <a id="externalLinkActivity1" href="https://www.loppemarkeder.com/category/helgen-30-og-31-mars-2019/" class="btn btn-primary" title="åpen i eksternal lenk" target="_blank">Mer detaljer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 22rem;">
+                        <img id="imgActivity2" class="card-img-top" src="img2.jpeg" height="180" width="286" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" id="headingActivity2">Aktivitetstittel</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="dateTimeActivity2">Dato og Tid: Tid: </li>
+                            <li class="list-group-item"><a id="locationActivity2" href="#" target="_blank" class="card-link">AktivitetsSted: </a></li>
+                            <!---->
+                        </ul>
+                        <div class="card-body">
+                            <p id="shortDescriptionActivity2" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-body">
+                            <a id="externalLinkActivity2" href="#" target="_blank" class="btn btn-primary" title="åpen i eksternal lenk">Mer detaljer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 22rem;">
+                        <img id="imgActivity3" class="card-img-top" src="img3.jpeg" height="180" width="286" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" id="headingActivity3">Aktivitetstittel</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="dateTimeActivity3">Dato og Tid: </li>
+                            <li class="list-group-item"><a id="locationActivity3" href="#" target="_blank" class="card-link">AktivitetsSted:  </a></li>
+                            <!---->
+                        </ul>
+                        <div class="card-body">
+                            <p id="shortDescriptionActivity3" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-body">
+                            <a id="externalLinkActivity3" href="#" target="_blank" class="btn btn-primary" title="åpen i eksternal lenk">Mer detaljer</a>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Site footer -->
+                <footer class="footer">
+                    <section id="lab_social_icon_footer">
+                        <!-- Include Font Awesome Stylesheet in Header -->
+                        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+                        <div class="container">
+                            <div class="text-center center-block">
+                                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                                <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                            </div>
+                        </div>
+                    </section>
+                </footer>
+
+        </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="bootstrap-4.0.0/assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>    </body>
+        <script src="https://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="https://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 </html>
