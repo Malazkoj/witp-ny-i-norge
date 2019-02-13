@@ -33,6 +33,17 @@ app.get('/api/activities-for-interest', function (req, res) {
     res.send(getActivitiesForInterest(interestTitle));
 } );
 
+app.get('/api/activities/:placeName', function (req, res) {
+    let placeName = req.params.placeName;
+
+    res.send(getActivitiesByPlace(placeName));
+} );
+
+app.get('/api/activities/:interestTitle/:placeName', function (req, res) {
+    let interestTitle = req.params.interestTitle;
+    let placeName = req.params.placeName;
+    res.send(getActivitiesByInterestAndPlace(interestTitle, placeName))
+});
 
 app.get('/api/categories', function (req, res) {
 
@@ -97,7 +108,41 @@ function getPlaces() {
     return places;
 }
 
+function getActivitiesByPlace(placeName){
+    let activitiesForPlace = [];
 
+    const interestKeys = Object.keys(categories);
+    for(const interestKey of interestKeys){
+        let activityKeys = Object.keys(categories[interestKey]);
+        for( const activityKey of activityKeys){
+            if(!isNaN(Number(activityKey))){
+                let cityName = categories[interestKey][activityKey].location.city;
+                if(placeName === cityName){
+                    activitiesForPlace.push(categories[interestKey][activityKey]);
+                }
+            }
+        }
+    }
+
+    return activitiesForPlace;
+
+}
+
+function getActivitiesByInterestAndPlace(interestTitle, placeName){
+    let activitiesForPlaceAndInterest = [];
+
+        let activityKeys = Object.keys(categories[interestTitle]);
+        for( const activityKey of activityKeys){
+            if(!isNaN(Number(activityKey))){
+                let cityName = categories[interestTitle][activityKey].location.city;
+                if(placeName === cityName){
+                    activitiesForPlaceAndInterest.push(categories[interestTitle][activityKey]);
+                }
+            }
+        }
+
+    return activitiesForPlaceAndInterest;
+}
 /*
 
 function getPlacesWithDistricts() {
@@ -162,7 +207,7 @@ function getHardCodedCategories() {
                     placeName: "SoCentral",
                     address:"Øvre Slottsgate 3",
                     area:"Akershus",
-                    city:"Oslo",
+                    city:"Kløfta",
                     zipCode:"0157",
                     district: "Sentrum",
                     googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
