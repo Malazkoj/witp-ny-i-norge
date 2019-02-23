@@ -108,8 +108,6 @@ function populateInterestDropDownList(){
         });
 
 }
-export function greetings(navn){
-    return `Hello ${navn}!`;
-}
+
 // Calling main on load
 window.onload = main;

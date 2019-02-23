@@ -11,5 +11,9 @@ const esmImport = require('esm')(module);
   that's why they are named with the suffix 'assert' and not 'test'
   run the teste from the command line with `npm test`
 */
+
+// The first test suite is tests running on the server-side code
 const test_suite_1 = esmImport('./api-utils.assert');
+
+// The second test suite is tests running on the client-side code (browser)
 const test_suite_2 = esmImport('./client-app-utils.assert');
