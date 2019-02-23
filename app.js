@@ -146,26 +146,26 @@ function getHardCodedCategories() {
         aktiviteterForBarn:{
             titel:"Aktiviteter For Barn",
             0: {
-                activityTitle:"Sub category 1",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"SIRKUS MIKKELIKSKI",
+                shortDescription:"ÈGAL TEATER PRESENTERER DEN KLASISKE ALF PRØYSEN TEATER FORESTILLINGEN SIRKUS MIKKELIKSKI Bli kjent med de søte, underlige og gode dyrebarna fra Prøysens univers. Møt Bolla Pinnsvin, Helene Harefrøken, Nøtteliten, med sirkus sjarlatanene Ruski og Snuski, når Sirkus Mikkelikski inviterer til en forrykende festforestilling for hele familien.",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.detskjerioslo.no/hvaskjer/108883.html",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "28.02.2019",
-                        clockStart: "10.00",
-                        clockFinish: "11.00"
+                        dayOfWeek: "Lørdag",
+                        date: "02.03.2019",
+                        clockStart: "14.00",
+                        clockFinish: "16.00"
                     }
                 ,
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Egal teater",
+                    address:"Munkedamsveien 80a",
+                    area:"Oslo",
                     city:"Oslo",
-                    zipCode:"0157",
+                    zipCode:"0270",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
+                    googleMapsUrl: "https://www.google.com/maps/place/Egal+Teater+AS/@59.9112968,10.7107724,16.63z/data=!4m5!3m4!1s0x46416e150cc6a5ff:0x3cca8cbcda9ad4f9!8m2!3d59.9116517!4d10.7144286",
                 },
                 imgURL: "http://www.lovethispic.com/uploaded_images/26332-Beautiful-Morning.jpg",
                 ageGroup:["barn"]
