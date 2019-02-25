@@ -222,62 +222,62 @@ function getHardCodedCategories() {
         festivaler:{
             titel:"Festivaler",
             0: {
-                activityTitle:"Øyafestivalen",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"Oslo Internasjonale Teaterfestival 2019 ",
+                shortDescription:"Oslo Internasjonale Teaterfestival 2019 presenterer et omfattende program med store, internasjonale navn og spennende forestillinger. Alle forestillinger spilles på engelsk, eller med engelsk teksting.",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=766405&Oslo-Internasjonale-Teaterfestival&startDate=1551913200000&startTime=null#product-info1",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "28.02.2019",
-                        clockStart: "10.00",
-                        clockFinish: "11.00"
+                        dayOfWeek: "Mandag -Søndag",
+                        date: "07.03.2019 - 16.03.2019",
+                        clockStart: "08.30",
+                        clockFinish: "19.00"
                     },
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Black Box Teater",
+                    address:"Marstrandgata 8",
+                    area:"Oslo",
                     city:"Oslo",
-                    zipCode:"0157",
+                    zipCode:"0586",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
+                    googleMapsUrl: "https://www.google.com/maps/place/Marstrandgata+8,+0566+Oslo/@59.9254563,10.7511435,14.91z/data=!4m5!3m4!1s0x46416e4210e17031:0x6b5d643563f59bd6!8m2!3d59.9271064!4d10.7684854",
                 },
                 imgURL: "https://www.visitoslo.com/Images/Bilder%20Oslo/Hva%20skjer/Oyafestivalen-14-konsert-Rival-Sons-foto-Erik-Moholdt-%C3%98ya.jpg?t=ScaleToFill%7C1450x720&ts=4UdVjKb%2FloVhq59WbtG3OBFI1Ew%3D&pr=2.625",
-                ageGroup:["famile"]
+                ageGroup:["alle"]
             },
             1: {
-                activityTitle:"Miniøya",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"Holmenkollen Skifestival",
+                shortDescription:"Årlig folkefest i Holmenkollen hvor verdenseliten i nordiske grener samles til spennende World Cup-konkurranser i langrenn, kombinert og hopp.",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=178304&Holmenkollen-Skifestival&startDate=1551999600000&startTime=null#product-info1",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "10.03.2019",
-                        clockStart: "10.00",
-                        clockFinish: "11.00"
+                        dayOfWeek: "Frredag - Søndag",
+                        date: "08- 10.03.2019",
+                        clockStart: "Fre:19.30, Lør:09.00, Søn:09.15",
+                        clockFinish: "Lør-og- Søn: 17.00"
                     },
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Holmenkollen",
+                    address:"Kongeveien 5",
+                    area:"Oslo",
                     city:"Oslo",
-                    zipCode:"0157",
+                    zipCode:"0787",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
+                    googleMapsUrl: "https://www.google.com/maps/place/Kongeveien+5,+0787+Oslo/@59.9770914,10.5357175,12.01z/data=!4m5!3m4!1s0x46416d7f0a1e5601:0xc21fecfe468ca327!8m2!3d59.962628!4d10.6662844",
                 },
                 imgURL: "https://www.visitoslo.com/Images/Bilder%20Oslo/Hva%20skjer/Mini%C3%B8ya.jpg?t=ScaleDownToFill%7c704x352&ts=3kUqZ3xSCHiWBC3rnFYwRsOHb44%3d",
                 ageGroup:["barn"]
             },
             2: {
-                activityTitle:"Kirkemusikkfestival",
+                activityTitle:"Arabiske filmdager",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=877203&Arabiske-filmdager&startDate=1553036400000&startTime=null",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "10.03.2019",
+                        dayOfWeek: "Onsdag - Søndag",
+                        date: "20 - 24.03.2019",
                         clockStart: "10.00",
                         clockFinish: "11.00"
                     },
