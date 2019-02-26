@@ -146,26 +146,26 @@ function getHardCodedCategories() {
         aktiviteterForBarn:{
             titel:"Aktiviteter For Barn",
             0: {
-                activityTitle:"Sub category 1",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"SIRKUS MIKKELIKSKI",
+                shortDescription:"ÈGAL TEATER PRESENTERER DEN KLASISKE ALF PRØYSEN TEATER FORESTILLINGEN SIRKUS MIKKELIKSKI Bli kjent med de søte, underlige og gode dyrebarna fra Prøysens univers. Møt Bolla Pinnsvin, Helene Harefrøken, Nøtteliten, med sirkus sjarlatanene Ruski og Snuski, når Sirkus Mikkelikski inviterer til en forrykende festforestilling for hele familien.",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.detskjerioslo.no/hvaskjer/108883.html",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "28.02.2019",
-                        clockStart: "10.00",
-                        clockFinish: "11.00"
+                        dayOfWeek: "Lørdag",
+                        date: "02.03.2019",
+                        clockStart: "14.00",
+                        clockFinish: "16.00"
                     }
                 ,
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Egal teater",
+                    address:"Munkedamsveien 80a",
+                    area:"Oslo",
                     city:"Oslo",
-                    zipCode:"0157",
+                    zipCode:"0270",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
+                    googleMapsUrl: "https://www.google.com/maps/place/Egal+Teater+AS/@59.9112968,10.7107724,16.63z/data=!4m5!3m4!1s0x46416e150cc6a5ff:0x3cca8cbcda9ad4f9!8m2!3d59.9116517!4d10.7144286",
                 },
                 imgURL: "http://www.lovethispic.com/uploaded_images/26332-Beautiful-Morning.jpg",
                 ageGroup:["barn"]
@@ -222,62 +222,62 @@ function getHardCodedCategories() {
         festivaler:{
             titel:"Festivaler",
             0: {
-                activityTitle:"Øyafestivalen",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"Oslo Internasjonale Teaterfestival 2019 ",
+                shortDescription:"Oslo Internasjonale Teaterfestival 2019 presenterer et omfattende program med store, internasjonale navn og spennende forestillinger. Alle forestillinger spilles på engelsk, eller med engelsk teksting.",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=766405&Oslo-Internasjonale-Teaterfestival&startDate=1551913200000&startTime=null#product-info1",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "28.02.2019",
-                        clockStart: "10.00",
-                        clockFinish: "11.00"
+                        dayOfWeek: "Mandag -Søndag",
+                        date: "07.03.2019 - 16.03.2019",
+                        clockStart: "08.30",
+                        clockFinish: "19.00"
                     },
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Black Box Teater",
+                    address:"Marstrandgata 8",
+                    area:"Oslo",
                     city:"Oslo",
-                    zipCode:"0157",
+                    zipCode:"0586",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
+                    googleMapsUrl: "https://www.google.com/maps/place/Marstrandgata+8,+0566+Oslo/@59.9254563,10.7511435,14.91z/data=!4m5!3m4!1s0x46416e4210e17031:0x6b5d643563f59bd6!8m2!3d59.9271064!4d10.7684854",
                 },
                 imgURL: "https://www.visitoslo.com/Images/Bilder%20Oslo/Hva%20skjer/Oyafestivalen-14-konsert-Rival-Sons-foto-Erik-Moholdt-%C3%98ya.jpg?t=ScaleToFill%7C1450x720&ts=4UdVjKb%2FloVhq59WbtG3OBFI1Ew%3D&pr=2.625",
-                ageGroup:["famile"]
+                ageGroup:["alle"]
             },
             1: {
-                activityTitle:"Miniøya",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"Holmenkollen Skifestival",
+                shortDescription:"Årlig folkefest i Holmenkollen hvor verdenseliten i nordiske grener samles til spennende World Cup-konkurranser i langrenn, kombinert og hopp.",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=178304&Holmenkollen-Skifestival&startDate=1551999600000&startTime=null#product-info1",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "10.03.2019",
-                        clockStart: "10.00",
-                        clockFinish: "11.00"
+                        dayOfWeek: "Frredag - Søndag",
+                        date: "08- 10.03.2019",
+                        clockStart: "Fre:19.30, Lør:09.00, Søn:09.15",
+                        clockFinish: "Lør-og- Søn: 17.00"
                     },
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Holmenkollen",
+                    address:"Kongeveien 5",
+                    area:"Oslo",
                     city:"Oslo",
-                    zipCode:"0157",
+                    zipCode:"0787",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
+                    googleMapsUrl: "https://www.google.com/maps/place/Kongeveien+5,+0787+Oslo/@59.9770914,10.5357175,12.01z/data=!4m5!3m4!1s0x46416d7f0a1e5601:0xc21fecfe468ca327!8m2!3d59.962628!4d10.6662844",
                 },
                 imgURL: "https://www.visitoslo.com/Images/Bilder%20Oslo/Hva%20skjer/Mini%C3%B8ya.jpg?t=ScaleDownToFill%7c704x352&ts=3kUqZ3xSCHiWBC3rnFYwRsOHb44%3d",
                 ageGroup:["barn"]
             },
             2: {
-                activityTitle:"Kirkemusikkfestival",
+                activityTitle:"Arabiske filmdager",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=877203&Arabiske-filmdager&startDate=1553036400000&startTime=null",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "10.03.2019",
+                        dayOfWeek: "Onsdag - Søndag",
+                        date: "20 - 24.03.2019",
                         clockStart: "10.00",
                         clockFinish: "11.00"
                     },
@@ -297,7 +297,7 @@ function getHardCodedCategories() {
         idrettstilbud:{
             titel:"Idrettstilbud",
             0: {
-                activityTitle:"Sub category 1",
+                activityTitle:"Håndball ",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
@@ -447,7 +447,7 @@ function getHardCodedCategories() {
         natur:{
             titel:"Natur",
             0: {
-                activityTitle:"Sub category 1",
+                activityTitle:"Ut i naturen",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
@@ -522,76 +522,76 @@ function getHardCodedCategories() {
         turmuligheter:{
             titel:"Turmuligheter",
             0: {
-                activityTitle:"Sub category 1",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"FRILUFTSTRIM I FROGNERPARKEN",
+                shortDescription:"Kom i form gjennom hyggelig samvær med turglade mennesker på Friluftstrimmen i Frognerparken! Dette er et gratis tilbud og det ...",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.dntoslo.no/aktiviteter/106030/865434/",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
+                        dayOfWeek: "Torsdag",
                         date: "28.02.2019",
                         clockStart: "10.00",
                         clockFinish: "11.00"
                     },
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Frognerparken v/p-plassen ved Frognerbadet",
+                    address:"Kirkeveien ",
+                    area:"Frogner",
                     city:"Oslo",
-                    zipCode:"0157",
+                    zipCode:"0268",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
+                    googleMapsUrl: "https://www.google.com/maps/place/Frognerparken/@59.926461,10.7012847,17z/data=!3m1!4b1!4m5!3m4!1s0x46416dcf4317929f:0xd3b2d61d28d76a9!8m2!3d59.9264583!4d10.7034734",
                 },
                 imgURL: "http://www.lovethispic.com/uploaded_images/26332-Beautiful-Morning.jpg",
-                ageGroup:["barn"]
+                ageGroup:["voksne"]
             },
             1: {
-                activityTitle:"Sub category 2",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"Internasjonal torsdagstur",
+                shortDescription:"Velkommen til internasjonal torsdagtur Turene er et ledd i vårt turprosjekt \"Sammen Til Topps\". Torsdagsturene varer ca. 1,5 time og har ulike ruter nesten ...",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.dntoslo.no/aktiviteter/105939/865562/",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "10.03.2019",
-                        clockStart: "10.00",
-                        clockFinish: "11.00"
+                        dayOfWeek: "Torsdag",
+                        date: "28.02.2019",
+                        clockStart: "18.00",
+                        clockFinish: "20.00"
                     },
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Borgenveien ",
+                    address:"Borgenveien 100 ",
+                    area:"Oslo",
                     city:"Oslo",
                     zipCode:"0157",
                     district: "Sentrum",
                     googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
                 },
                 imgURL: "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
-                ageGroup:["barn"]
+                ageGroup:["alle"]
             },
             2: {
-                activityTitle:"Sub category 3",
-                shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
+                activityTitle:"Nærtur på Nordstarnd og Prinsdal",
+                shortDescription:"Prinsdal og Grønliåsen. Vi møtes kl. 11 på Lerdal barnehage/bussholdeplass i Prinsdal/Hauketo.  Generelt om nærturene  Opplev turmulighetene i Søndre Nordstrand, sammen ...",
                 link:
-                    "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
+                    "https://www.dntoslo.no/aktiviteter/106461/866088/",
                 openingHours:
                     {
-                        dayOfWeek: "Mandag",
-                        date: "10.03.2019",
+                        dayOfWeek: "Torsdag",
+                        date: "28.02.2019",
                         clockStart: "10.00",
                         clockFinish: "11.00"
                     },
                 location: {
-                    placeName: "SoCentral",
-                    address:"Øvre Slottsgate 3",
-                    area:"Akershus",
+                    placeName: "Lerdal Barnehage",
+                    address:"Nedre Prinsdals vei 55",
+                    area:"Holmlia",
                     city:"Oslo",
-                    zipCode:"0157",
-                    district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/SoCentral/@59.911117,10.7380262,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e87c47c7db5:0x3bd24f750232b68d!8m2!3d59.911117!4d10.7402149",
+                    zipCode:"1263",
+                    district: "Nordstrand",
+                    googleMapsUrl: "https://www.google.com/maps/place/Lerdal+barnehage/@59.8371011,10.803627,17z/data=!3m1!4b1!4m5!3m4!1s0x46416895618418d9:0x62d52ab472dca99!8m2!3d59.8370984!4d10.8058157",
                 },
                 imgURL: "https://wallpapersmug.com/download/720x1280/fd510a/heaven-tunnel-cave-4k.jpg",
-                ageGroup:["barn"]
+                ageGroup:["alle"]
             }
         },
         restauranterOgCafeer:{
@@ -749,7 +749,7 @@ function getHardCodedCategories() {
         sosialeMoteplasser:{
             titel:"Sosiale Møteplasser",
             0: {
-                activityTitle:"Sub category 1",
+                activityTitle:"Sosial møte",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
@@ -824,7 +824,7 @@ function getHardCodedCategories() {
         religioseMoteplasser:{
             titel:"Religiøse Møteplasser",
             0: {
-                activityTitle:"Sub category 1",
+                activityTitle:"Religøse møte",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
                     "https://www.loppemarkeder.com/oslo-nordstrand-skole-4-og-5-mai-2019/",
