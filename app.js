@@ -311,7 +311,7 @@ function getHardCodedCategories() {
                     district: "Sentrum",
                     googleMapsUrl: "https://www.visitoslo.com/PageFiles/297874/Holmenkollen-Skifestival-langrenn-herrer-Magnus-Nyl%C3%B8kken.jpg?t=ScaleToFill%7c725x360&ts=%2b7g6YxqKN2D3RFrEQ8BWo5RTLOI%3d&pr=1",
                 },
-                imgURL: "https://www.visitoslo.com/Images/Bilder%20Oslo/Hva%20skjer/Mini%C3%B8ya.jpg?t=ScaleDownToFill%7c704x352&ts=3kUqZ3xSCHiWBC3rnFYwRsOHb44%3d",
+                imgURL: "https://www.visitoslo.com/PageFiles/297874/Holmenkollen-Skifestival-langrenn-herrer-Magnus-Nyl%C3%B8kken.jpg?t=ScaleToFill%7C1450x720&ts=cQscUMYKexc4Axhpl0ab5WcSbFg%3D",
                 ageGroup:["barn"]
             },
             2: {
@@ -343,7 +343,7 @@ function getHardCodedCategories() {
             titel:"Idrettstilbud",
             0: {
                 activityTitle:"HåndballKlubb Lillestrøm ",
-                shortDescription:"Du kan søke opp en klubb og melde deg inn i klubben og grenen du ønsker medlemskap i. Følg instruksjonene under eller se videoen.",
+                shortDescription:"Du kan søke opp en klubb og melde deg inn i klubben og grenen du ønsker medlemskap i. Følg instruksjonene under eller se videoen. Det er altid plass for deg!",
                 link:
                     "https://www.lillestromhandballklubb.no/",
                 openingHours:
@@ -386,12 +386,12 @@ function getHardCodedCategories() {
                     district: "Akershus",
                     googleMapsUrl: "https://skisporet.no/setView/59.9231399/11.2267407/14.1/norges_grunnkart",
                 },
-                imgURL: "https://www.snow-forecast.com/resortphotos2/Holmenkollen.jpg",
+                imgURL: "https://biriil.no/wp-content/uploads/2016/05/Madshussprinten-1500x630.png",
                 ageGroup:["voksne"]
             },
             2: {
                 activityTitle:"Svømmekurs for barn og voksne",
-                shortDescription:"Her finner du svømmekurs for barn og voksne, nybegynnere og viderekomne. Du finner svømmerkurs for crawl, brystsvømming og butterfly. Det er altid plass for deg som vil lære deg mer om å svømme bedre og bedre .",
+                shortDescription:"Her finner du svømmekurs for barn og voksne, nybegynnere og viderekomne. Du finner svømmerkurs for crawl, brystsvømming og butterfly.",
                 link:
                     "https://www.kursagenten.no/kurs/Svommekurs-og-livredning/Skedsmo-Lillestrom",
                 openingHours:
@@ -592,7 +592,7 @@ function getHardCodedCategories() {
             },
             1: {
                 activityTitle:"Internasjonal torsdagstur",
-                shortDescription:"Velkommen til internasjonal torsdagtur Turene er et ledd i vårt turprosjekt \"Sammen Til Topps\". Torsdagsturene varer ca. 1,5 time og har ulike ruter nesten ...",
+                shortDescription:"Velkommen til internasjonal torsdagtur Turene er et ledd i vårt turprosjekt \"Sammen Til Topps\". Torsdagsturene varer ca. 1,5 time og har ulike ruter. Du er hjertelig velkommen til å bli med turen med oss!",
                 link:
                     "https://www.dntoslo.no/aktiviteter/105939/865562/",
                 openingHours:
