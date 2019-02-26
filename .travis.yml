@@ -1,3 +1,9 @@
 language: node_js
 node_js:
   - "11"
+
+notifications:
+  slack:
+    rooms:
+    - wit-programmet:Y1mHpPi5g0FeRivcCGiKkpLK#witp--ny-i-norge
+    - wit-programmet:Y1mHpPi5g0FeRivcCGiKkpLK#test-github
