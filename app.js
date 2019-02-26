@@ -33,6 +33,17 @@ app.get('/api/activities-for-interest', function (req, res) {
     res.send(getActivitiesForInterest(interestTitle));
 } );
 
+app.get('/api/activities/:placeName', function (req, res) {
+    let placeName = req.params.placeName;
+
+    res.send(getActivitiesByPlace(placeName));
+} );
+
+app.get('/api/activities/:interestTitle/:placeName', function (req, res) {
+    let interestTitle = req.params.interestTitle;
+    let placeName = req.params.placeName;
+    res.send(getActivitiesByInterestAndPlace(interestTitle, placeName))
+});
 
 app.get('/api/categories', function (req, res) {
 
@@ -97,7 +108,41 @@ function getPlaces() {
     return places;
 }
 
+function getActivitiesByPlace(placeName){
+    let activitiesForPlace = [];
 
+    const interestKeys = Object.keys(categories);
+    for(const interestKey of interestKeys){
+        let activityKeys = Object.keys(categories[interestKey]);
+        for( const activityKey of activityKeys){
+            if(!isNaN(Number(activityKey))){
+                let cityName = categories[interestKey][activityKey].location.city;
+                if(placeName === cityName){
+                    activitiesForPlace.push(categories[interestKey][activityKey]);
+                }
+            }
+        }
+    }
+
+    return activitiesForPlace;
+
+}
+
+function getActivitiesByInterestAndPlace(interestTitle, placeName){
+    let activitiesForPlaceAndInterest = [];
+
+        let activityKeys = Object.keys(categories[interestTitle]);
+        for( const activityKey of activityKeys){
+            if(!isNaN(Number(activityKey))){
+                let cityName = categories[interestTitle][activityKey].location.city;
+                if(placeName === cityName){
+                    activitiesForPlaceAndInterest.push(categories[interestTitle][activityKey]);
+                }
+            }
+        }
+
+    return activitiesForPlaceAndInterest;
+}
 /*
 
 function getPlacesWithDistricts() {
