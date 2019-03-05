@@ -33,6 +33,17 @@ app.get('/api/activities-for-interest', function (req, res) {
     res.send(getActivitiesForInterest(interestTitle));
 } );
 
+app.get('/api/activities/:placeName', function (req, res) {
+    let placeName = req.params.placeName;
+
+    res.send(getActivitiesByPlace(placeName));
+} );
+
+app.get('/api/activities/:interestTitle/:placeName', function (req, res) {
+    let interestTitle = req.params.interestTitle;
+    let placeName = req.params.placeName;
+    res.send(getActivitiesByInterestAndPlace(interestTitle, placeName))
+});
 
 app.get('/api/categories', function (req, res) {
 
@@ -97,7 +108,41 @@ function getPlaces() {
     return places;
 }
 
+function getActivitiesByPlace(placeName){
+    let activitiesForPlace = [];
 
+    const interestKeys = Object.keys(categories);
+    for(const interestKey of interestKeys){
+        let activityKeys = Object.keys(categories[interestKey]);
+        for( const activityKey of activityKeys){
+            if(!isNaN(Number(activityKey))){
+                let cityName = categories[interestKey][activityKey].location.city;
+                if(placeName === cityName){
+                    activitiesForPlace.push(categories[interestKey][activityKey]);
+                }
+            }
+        }
+    }
+
+    return activitiesForPlace;
+
+}
+
+function getActivitiesByInterestAndPlace(interestTitle, placeName){
+    let activitiesForPlaceAndInterest = [];
+
+        let activityKeys = Object.keys(categories[interestTitle]);
+        for( const activityKey of activityKeys){
+            if(!isNaN(Number(activityKey))){
+                let cityName = categories[interestTitle][activityKey].location.city;
+                if(placeName === cityName){
+                    activitiesForPlaceAndInterest.push(categories[interestTitle][activityKey]);
+                }
+            }
+        }
+
+    return activitiesForPlaceAndInterest;
+}
 /*
 
 function getPlacesWithDistricts() {
@@ -222,7 +267,7 @@ function getHardCodedCategories() {
         festivaler:{
             titel:"Festivaler",
             0: {
-                activityTitle:"Oslo Internasjonale Teaterfestival 2019 ",
+                activityTitle:"Oslo Internasjonale Teaterfestival",
                 shortDescription:"Oslo Internasjonale Teaterfestival 2019 presenterer et omfattende program med store, internasjonale navn og spennende forestillinger. Alle forestillinger spilles på engelsk, eller med engelsk teksting.",
                 link:
                     "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=766405&Oslo-Internasjonale-Teaterfestival&startDate=1551913200000&startTime=null#product-info1",
@@ -242,7 +287,7 @@ function getHardCodedCategories() {
                     district: "Sentrum",
                     googleMapsUrl: "https://www.google.com/maps/place/Marstrandgata+8,+0566+Oslo/@59.9254563,10.7511435,14.91z/data=!4m5!3m4!1s0x46416e4210e17031:0x6b5d643563f59bd6!8m2!3d59.9271064!4d10.7684854",
                 },
-                imgURL: "https://www.visitoslo.com/Images/Bilder%20Oslo/Hva%20skjer/Oyafestivalen-14-konsert-Rival-Sons-foto-Erik-Moholdt-%C3%98ya.jpg?t=ScaleToFill%7C1450x720&ts=4UdVjKb%2FloVhq59WbtG3OBFI1Ew%3D&pr=2.625",
+                imgURL: "https://scontent.fosl3-2.fna.fbcdn.net/v/t1.0-9/52688631_2160410500711858_4015142261040873472_n.jpg?_nc_cat=109&_nc_ht=scontent.fosl3-2.fna&oh=816c54144e27e36bf817ed7102c612a2&oe=5CEA7664",
                 ageGroup:["alle"]
             },
             1: {
@@ -252,10 +297,10 @@ function getHardCodedCategories() {
                     "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=178304&Holmenkollen-Skifestival&startDate=1551999600000&startTime=null#product-info1",
                 openingHours:
                     {
-                        dayOfWeek: "Frredag - Søndag",
-                        date: "08- 10.03.2019",
-                        clockStart: "Fre:19.30, Lør:09.00, Søn:09.15",
-                        clockFinish: "Lør-og- Søn: 17.00"
+                        dayOfWeek: "Søndag",
+                        date: "10.03.2019",
+                        clockStart: "09.15",
+                        clockFinish: "17.00"
                     },
                 location: {
                     placeName: "Holmenkollen",
@@ -264,22 +309,22 @@ function getHardCodedCategories() {
                     city:"Oslo",
                     zipCode:"0787",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/Kongeveien+5,+0787+Oslo/@59.9770914,10.5357175,12.01z/data=!4m5!3m4!1s0x46416d7f0a1e5601:0xc21fecfe468ca327!8m2!3d59.962628!4d10.6662844",
+                    googleMapsUrl: "https://www.visitoslo.com/PageFiles/297874/Holmenkollen-Skifestival-langrenn-herrer-Magnus-Nyl%C3%B8kken.jpg?t=ScaleToFill%7c725x360&ts=%2b7g6YxqKN2D3RFrEQ8BWo5RTLOI%3d&pr=1",
                 },
-                imgURL: "https://www.visitoslo.com/Images/Bilder%20Oslo/Hva%20skjer/Mini%C3%B8ya.jpg?t=ScaleDownToFill%7c704x352&ts=3kUqZ3xSCHiWBC3rnFYwRsOHb44%3d",
+                imgURL: "https://www.visitoslo.com/PageFiles/297874/Holmenkollen-Skifestival-langrenn-herrer-Magnus-Nyl%C3%B8kken.jpg?t=ScaleToFill%7C1450x720&ts=cQscUMYKexc4Axhpl0ab5WcSbFg%3D",
                 ageGroup:["barn"]
             },
             2: {
                 activityTitle:"Arabiske filmdager",
                 shortDescription:"Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.",
                 link:
-                    "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=877203&Arabiske-filmdager&startDate=1553036400000&startTime=null#product-info1",
+                    "https://www.visitoslo.com/no/hva-skjer/festivaler/festivalkalender/?TLp=877203&Arabiske-filmdager&startDate=1553036400000&startTime=null",
                 openingHours:
                     {
-                        dayOfWeek: "Onsdag - Søndag",
-                        date: "20 - 24.03.2019",
-                        clockStart: "Programmet publiseres snart",
-                        clockFinish: "Programmet publiseres snart"
+                        dayOfWeek: "Onsdag",
+                        date: "20.03.2019",
+                        clockStart: "10.00",
+                        clockFinish: "11.00"
                     },
                 location: {
                     placeName: "Vika Kino",
@@ -288,7 +333,7 @@ function getHardCodedCategories() {
                     city:"Oslo",
                     zipCode:"0251",
                     district: "Sentrum",
-                    googleMapsUrl: "https://www.google.com/maps/place/Rusel%C3%B8kkveien+16,+0251+Oslo/@59.9134875,10.7259539,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e8080c49171:0xfc87c6be6ee40ceb!8m2!3d59.9134848!4d10.7281426",
+                    googleMapsUrl: "https://www.google.com/maps/place/Rusel%C3%B8kkveien+16,+0251+Oslo/@59.9134875,10.7259539,17z/data=!3m1!4b1!4m5!3m4!1s0x46416e8080c49171:0xfc87c6be6ee40ceb!8m2!3d59.9134848!4d10.7281426"
                 },
                 imgURL: "https://media.newmindmedia.com/TellUs/image/?file=Arabiske_Filmdager_2121608712.jpg&dh=519&dw=780&cropX=348&cropY=0&cropH=519&cropW=780",
                 ageGroup:["voksne"]
@@ -298,7 +343,7 @@ function getHardCodedCategories() {
             titel:"Idrettstilbud",
             0: {
                 activityTitle:"HåndballKlubb Lillestrøm ",
-                shortDescription:"Du kan søke opp en klubb og melde deg inn i klubben og grenen du ønsker medlemskap i. Følg instruksjonene under eller se videoen.",
+                shortDescription:"Du kan søke opp en klubb og melde deg inn i klubben og grenen du ønsker medlemskap i. Følg instruksjonene under eller se videoen. Det er altid plass for deg!",
                 link:
                     "https://www.lillestromhandballklubb.no/",
                 openingHours:
@@ -341,7 +386,7 @@ function getHardCodedCategories() {
                     district: "Akershus",
                     googleMapsUrl: "https://skisporet.no/setView/59.9231399/11.2267407/14.1/norges_grunnkart",
                 },
-                imgURL: "https://www.snow-forecast.com/resortphotos2/Holmenkollen.jpg",
+                imgURL: "https://biriil.no/wp-content/uploads/2016/05/Madshussprinten-1500x630.png",
                 ageGroup:["voksne"]
             },
             2: {
@@ -522,8 +567,8 @@ function getHardCodedCategories() {
         turmuligheter:{
             titel:"Turmuligheter",
             0: {
-                activityTitle:"FRILUFTSTRIM I FROGNERPARKEN",
-                shortDescription:"Kom i form gjennom hyggelig samvær med turglade mennesker på Friluftstrimmen i Frognerparken! Dette er et gratis tilbud og det ...",
+                activityTitle:"Friluftstrim i Frognerparken",
+                shortDescription:"Kom i form gjennom hyggelig samvær med turglade mennesker på Friluftstrimmen i Frognerparken! Dette er et gratis tilbud og det.  Det er altid plass for deg som vil lære deg mer om å gå på tur bedre og bedre ...",
                 link:
                     "https://www.dntoslo.no/aktiviteter/106030/865434/",
                 openingHours:
@@ -547,7 +592,7 @@ function getHardCodedCategories() {
             },
             1: {
                 activityTitle:"Internasjonal torsdagstur",
-                shortDescription:"Velkommen til internasjonal torsdagtur Turene er et ledd i vårt turprosjekt \"Sammen Til Topps\". Torsdagsturene varer ca. 1,5 time og har ulike ruter nesten ...",
+                shortDescription:"Velkommen til internasjonal torsdagtur Turene er et ledd i vårt turprosjekt \"Sammen Til Topps\". Torsdagsturene varer ca. 1,5 time og har ulike ruter. Du er hjertelig velkommen til å bli med turen med oss!",
                 link:
                     "https://www.dntoslo.no/aktiviteter/105939/865562/",
                 openingHours:
@@ -570,7 +615,7 @@ function getHardCodedCategories() {
                 ageGroup:["alle"]
             },
             2: {
-                activityTitle:"Nærtur på Nordstarnd og Prinsdal",
+                activityTitle:"Nærtur på Nordstarnd",
                 shortDescription:"Prinsdal og Grønliåsen. Vi møtes kl. 11 på Lerdal barnehage/bussholdeplass i Prinsdal/Hauketo.  Generelt om nærturene  Opplev turmulighetene i Søndre Nordstrand, sammen ...",
                 link:
                     "https://www.dntoslo.no/aktiviteter/106461/866088/",
